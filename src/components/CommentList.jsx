@@ -10,7 +10,7 @@ const CommentList = () => {
   // console.log("comments list:", comments);
   // console.log("currentUser:", currentUser);
   return (
-    <div className="bg-gray-100 pt-8 pb-12">
+    <div className="bg-gray-100 pt-8 pb-12 px-4">
       {comments.map((comment, index) => (
         <Comment
           key={index}

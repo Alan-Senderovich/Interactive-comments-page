@@ -21,7 +21,7 @@ const CurrentUser = ({ currentUser }) => {
       <div className="flex items-center gap-4 flex-col">
         <textarea
           onChange={(e) => handleChangeText(e)}
-          className="w-full border border-gray-200 p-2 text-sm rounded-md"
+          className="w-full border border-gray-200 p-2 text-sm rounded-md text-gray-500"
           placeholder="Add a comment..."
           value={commentToAdd}
         ></textarea>

@@ -100,7 +100,7 @@ const Comment = ({
                 <div>
                   <textarea
                     ref={textareaRef}
-                    className="w-full border border-gray-200 rounded-md text-sm text-gray-400 h-24 overflow-y-hidden"
+                    className="w-full border border-gray-200 rounded-md text-sm text-gray-500 h-24 overflow-y-hidden"
                     defaultValue={content}
                   ></textarea>
                   <div className="flex justify-end gap-4">
@@ -128,7 +128,7 @@ const Comment = ({
           {/* Score and ReplyIcon -----------*/}
 
           <div className="flex justify-between order-2 md:order-1 md:w-full">
-            <div className="inline-flex items-center gap-4 bg-gray-100 px-2 py-1 rounded-md md:flex-col md:justify-center md:w-full ">
+            <div className="inline-flex items-center gap-4 bg-gray-100 px-2 py-1 rounded-md md:flex-col md:justify-center md:w-5/6">
               <span
                 className="cursor-pointer p-2"
                 onClick={() => handleUpdateScore("plus")}
@@ -186,7 +186,7 @@ const Comment = ({
             <img src={currentUser.image.png} alt="" className="w-8 h-8" />
             <textarea
               autoFocus
-              className="w-full border border-gray-400 rounded-md"
+              className="w-full border border-gray-400 rounded-md px-4 py-2 text-gray-500"
               onChange={(e) => handleChangeInputReply(e)}
               value={inputTextReply}
             ></textarea>
@@ -210,7 +210,7 @@ const Comment = ({
         </div>
       )}
       {/* Reply -----------*/}
-      <div className="pl-5 border border-l-2 border-r-0 border-t-0 border-b-0 ml-5">
+      <div className="pl-5 border border-l-2 border-r-0 border-t-0 border-b-0 md:ml-5">
         {commentReplies?.length > 0 &&
           commentReplies.map((reply, index) => (
             <CommentReply
