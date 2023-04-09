@@ -29,8 +29,7 @@ const Comment = ({
   const [commentShowModal, setCommentShowModal] = useState(false);
 
   const isYou = user.username === "juliusomo" ? true : false;
-  // const isYou = true;
-
+  
   useEffect(() => {
     setCommentReplies(replies);
   }, [replies]);
@@ -86,6 +85,9 @@ const Comment = ({
               <span className="text-sm text-blue-900 font-bold">
                 {user?.username}
               </span>
+              {isYou && (
+                <span className="bg-blue-800 text-white text-xs px-1 pb-0.5 rounded-sm">you</span>
+              )}
               <span className="text-sm text-gray-400">{createdAt}</span>
             </div>
             {/* User Info -----------*/}
