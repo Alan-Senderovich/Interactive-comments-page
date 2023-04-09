@@ -92,7 +92,7 @@ const CommentReply = ({
                 <div>
                   <textarea
                     ref={textareaRef}
-                    className="w-full border border-gray-200 rounded-md text-sm text-gray-500 h-24 overflow-y-hidden"
+                    className="w-full border border-gray-200 rounded-md text-sm text-gray-500 h-24 overflow-y-hidden resize-none"
                     defaultValue={content}
                     // value={content}
                   ></textarea>
@@ -139,14 +139,14 @@ const CommentReply = ({
             {isYou ? (
               <div className="flex gap-4 md:absolute md:top-5 md:right-5">
                 <div
-                  className="flex items-center gap-2 cursor-pointer"
+                  className="flex items-center gap-2 cursor-pointer hover:opacity-50 transition duration-300 ease-in-out"
                   onClick={handleDeleteComment}
                 >
                   <IconDelete />
                   <span className="text-red-400 font-bold">Delete</span>
                 </div>
                 <div
-                  className="flex items-center gap-2 cursor-pointer"
+                  className="flex items-center gap-2 cursor-pointer hover:opacity-50 transition duration-300 ease-in-out"
                   onClick={() => console.log("edit")}
                 >
                   <IconEdit />
@@ -160,7 +160,7 @@ const CommentReply = ({
               </div>
             ) : (
               <div
-                className="flex items-center gap-2 cursor-pointer md:absolute md:top-5 md:right-5"
+                className="flex items-center gap-2 cursor-pointer md:absolute md:top-5 md:right-5 hover:opacity-50 transition duration-300 ease-in-out"
                 onClick={() => setIsReply(true)}
               >
                 <IconReply />
@@ -179,7 +179,7 @@ const CommentReply = ({
             <img src={currentUser.image.png} alt="" className="w-8 h-8" />
             <textarea
               autoFocus
-              className="w-full border border-gray-400 rounded-md px-4 py-2 text-gray-500"
+              className="w-full border border-gray-400 rounded-md px-4 py-2 text-gray-500 resize-none"
               onChange={(e) => handleChangeInputReply(e)}
               value={inputTextReply}
               // defaultValue={`@${user.username}`}
